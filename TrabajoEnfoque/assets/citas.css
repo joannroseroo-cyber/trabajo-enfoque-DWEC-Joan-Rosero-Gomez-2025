@@ -1,0 +1,1208 @@
+@media (min-width: 1281px){
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    body{
+        height: 100svh;
+    }
+
+    @view-transition{
+        navigation: auto;
+    }
+
+    ::view-transition-group(*){
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(root){
+        animation: slide-out-to-left 1s forwards;
+    }
+
+    @keyframes slide-out-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    ::view-transition-new(root){
+        animation: slide-from-to-rigth 1s forwards;
+    }
+
+    @keyframes slide-from-to-rigth {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /*HEADER*/
+
+    .content_header{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .icon_home{
+        width: 40px;
+    }
+
+    .link_text{
+        text-decoration: none;
+        color: #004add;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    /*ZONA MAIN*/
+
+    .citas_main{
+        width: 100%;
+        height: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabla_cita{
+        margin-top: 2rem;
+        width: 80%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #fila_cabecera{
+        position: sticky;
+        top: 10rem;
+        background-color: #004add;
+        color: white;
+    }
+
+    .tabla_cita th{
+        font-size: 2rem;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .tabla_cita td{
+        border: 1px solid black;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .img_editar{
+        cursor: pointer;
+    }
+
+    .img_eliminar{
+        cursor: pointer;
+    }
+
+
+    /*FORM EDITAR*/
+
+    .pop_desplegable{
+        position: absolute;
+        top: 10rem;
+        left: -100%;
+        z-index: 10;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+
+    .form_main{
+        width: 70%;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .titulo_form{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #004add;
+    }
+
+    .gridBox_form{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .subtitulo_form_grid{
+        font-size: 2rem;
+        font-weight: 300;
+        color: #ff751f;
+        grid-column: 1 / 3;
+    }
+
+    .datos_paciente{
+        width: 100%;
+        margin: 0 auto;
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid lightgray;
+        padding: 2rem 1rem;  
+        font-size: 1.5rem;
+        grid-column: 0/1;
+    }
+
+    .datos_paciente:hover{
+        cursor: pointer;
+        border: 2px solid #004add;
+        color: #004add;
+    }
+
+    #date_paciente{
+        grid-column: 1 / 3;
+    }
+
+    #obs_pacientes{
+        grid-column: 1 / 3;
+        height: 10rem;
+    }
+
+    .btn_form{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 0 / 1;
+        background-color: #004add;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4280fb;
+    }
+
+    .btn_form_reset{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 2 / 3;
+        background-color: #ff751f;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form_reset:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #d45200;
+    }
+
+    /*FOOTER*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px){
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    body{
+        height: 100svh;
+    }
+
+    @view-transition{
+        navigation: auto;
+    }
+
+    ::view-transition-group(*){
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(root){
+        animation: slide-out-to-left 1s forwards;
+    }
+
+    @keyframes slide-out-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    ::view-transition-new(root){
+        animation: slide-from-to-rigth 1s forwards;
+    }
+
+    @keyframes slide-from-to-rigth {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /*HEADER*/
+
+    .content_header{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .icon_home{
+        width: 40px;
+    }
+
+    .link_text{
+        text-decoration: none;
+        color: #004add;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    /*ZONA MAIN*/
+
+    .citas_main{
+        width: 100%;
+        height: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabla_cita{
+        margin-top: 2rem;
+        width: 90%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #fila_cabecera{
+        position: sticky;
+        top: 10rem;
+        background-color: #004add;
+        color: white;
+    }
+
+    .tabla_cita th{
+        font-size: 1.2rem;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .tabla_cita td{
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .img_editar{
+        cursor: pointer;
+    }
+
+    .img_eliminar{
+        cursor: pointer;
+    }
+
+
+    /*FORM EDITAR*/
+
+    .pop_desplegable{
+        position: absolute;
+        top: 10rem;
+        left: -100%;
+        z-index: 10;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+
+    .form_main{
+        width: 70%;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .titulo_form{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #004add;
+    }
+
+    .gridBox_form{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .subtitulo_form_grid{
+        font-size: 2rem;
+        font-weight: 300;
+        color: #ff751f;
+        grid-column: 1 / 3;
+    }
+
+    .datos_paciente{
+        width: 100%;
+        margin: 0 auto;
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid lightgray;
+        padding: 2rem 1rem;  
+        font-size: 1.5rem;
+        grid-column: 0/1;
+    }
+
+    .datos_paciente:hover{
+        cursor: pointer;
+        border: 2px solid #004add;
+        color: #004add;
+    }
+
+    #date_paciente{
+        grid-column: 1 / 3;
+    }
+
+    #obs_pacientes{
+        grid-column: 1 / 3;
+        height: 10rem;
+    }
+
+    .btn_form{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 0 / 1;
+        background-color: #004add;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4280fb;
+    }
+
+    .btn_form_reset{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 2 / 3;
+        background-color: #ff751f;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form_reset:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #d45200;
+    }
+
+    /*FOOTER*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1024px){
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    body{
+        height: 100svh;
+    }
+
+    @view-transition{
+        navigation: auto;
+    }
+
+    ::view-transition-group(*){
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(root){
+        animation: slide-out-to-left 1s forwards;
+    }
+
+    @keyframes slide-out-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    ::view-transition-new(root){
+        animation: slide-from-to-rigth 1s forwards;
+    }
+
+    @keyframes slide-from-to-rigth {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /*HEADER*/
+
+    .content_header{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .icon_home{
+        width: 40px;
+    }
+
+    .link_text{
+        text-decoration: none;
+        color: #004add;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    /*ZONA MAIN*/
+
+    .citas_main{
+        width: 100%;
+        height: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabla_cita{
+        margin-top: 2rem;
+        width: 90%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #fila_cabecera{
+        position: sticky;
+        top: 10rem;
+        background-color: #004add;
+        color: white;
+    }
+
+    .tabla_cita th{
+        font-size: 1.2rem;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .tabla_cita td{
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .img_editar{
+        cursor: pointer;
+    }
+
+    .img_eliminar{
+        cursor: pointer;
+    }
+
+
+    /*FORM EDITAR*/
+
+    .pop_desplegable{
+        position: absolute;
+        top: 10rem;
+        left: -100%;
+        z-index: 10;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+
+    .form_main{
+        width: 70%;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .titulo_form{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #004add;
+    }
+
+    .gridBox_form{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .subtitulo_form_grid{
+        font-size: 2rem;
+        font-weight: 300;
+        color: #ff751f;
+        grid-column: 1 / 3;
+    }
+
+    .datos_paciente{
+        width: 100%;
+        margin: 0 auto;
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid lightgray;
+        padding: 2rem 1rem;  
+        font-size: 1.5rem;
+        grid-column: 0/1;
+    }
+
+    .datos_paciente:hover{
+        cursor: pointer;
+        border: 2px solid #004add;
+        color: #004add;
+    }
+
+    #date_paciente{
+        grid-column: 1 / 3;
+    }
+
+    #obs_pacientes{
+        grid-column: 1 / 3;
+        height: 10rem;
+    }
+
+    .btn_form{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 0 / 1;
+        background-color: #004add;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4280fb;
+    }
+
+    .btn_form_reset{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 2 / 3;
+        background-color: #ff751f;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form_reset:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #d45200;
+    }
+
+    /*FOOTER*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 900px){
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    body{
+        height: 100svh;
+    }
+
+    @view-transition{
+        navigation: auto;
+    }
+
+    ::view-transition-group(*){
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(root){
+        animation: slide-out-to-left 1s forwards;
+    }
+
+    @keyframes slide-out-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    ::view-transition-new(root){
+        animation: slide-from-to-rigth 1s forwards;
+    }
+
+    @keyframes slide-from-to-rigth {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /*HEADER*/
+
+    .content_header{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .icon_home{
+        width: 40px;
+    }
+
+    .link_text{
+        text-decoration: none;
+        color: #004add;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    /*ZONA MAIN*/
+
+    .citas_main{
+        width: 100%;
+        height: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabla_cita{
+        margin-top: 2rem;
+        width: 90%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #fila_cabecera{
+        position: sticky;
+        top: 10rem;
+        background-color: #004add;
+        color: white;
+    }
+
+    .tabla_cita th{
+        font-size: 1.2rem;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .tabla_cita td{
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .img_editar{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    .img_eliminar{
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /*FORM EDITAR*/
+
+    .pop_desplegable{
+        position: absolute;
+        top: 10rem;
+        left: -100%;
+        z-index: 10;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+
+    .form_main{
+        width: 70%;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .titulo_form{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #004add;
+    }
+
+    .gridBox_form{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .subtitulo_form_grid{
+        font-size: 2rem;
+        font-weight: 300;
+        color: #ff751f;
+        grid-column: 1 / 3;
+    }
+
+    .datos_paciente{
+        width: 100%;
+        margin: 0 auto;
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid lightgray;
+        padding: 2rem 1rem;  
+        font-size: 1.5rem;
+        grid-column: 0/1;
+    }
+
+    .datos_paciente:hover{
+        cursor: pointer;
+        border: 2px solid #004add;
+        color: #004add;
+    }
+
+    #date_paciente{
+        grid-column: 1 / 3;
+    }
+
+    #obs_pacientes{
+        grid-column: 1 / 3;
+        height: 10rem;
+    }
+
+    .btn_form{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 0 / 1;
+        background-color: #004add;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4280fb;
+    }
+
+    .btn_form_reset{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 2 / 3;
+        background-color: #ff751f;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form_reset:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #d45200;
+    }
+
+    /*FOOTER*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+        *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    body{
+        height: 100svh;
+    }
+
+    @view-transition{
+        navigation: auto;
+    }
+
+    ::view-transition-group(*){
+        animation-duration: 1s;
+    }
+
+    ::view-transition-old(root){
+        animation: slide-out-to-left 1s forwards;
+    }
+
+    @keyframes slide-out-to-left{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+    ::view-transition-new(root){
+        animation: slide-from-to-rigth 1s forwards;
+    }
+
+    @keyframes slide-from-to-rigth {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0%);
+        }
+    }
+
+    /*HEADER*/
+
+    .content_header{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link_header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .icon_home{
+        width: 40px;
+    }
+
+    .link_text{
+        text-decoration: none;
+        color: #004add;
+        cursor: pointer;
+        font-size: 3rem;
+    }
+
+    /*ZONA MAIN*/
+
+    .citas_main{
+        width: 100%;
+        height: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabla_cita{
+        margin-top: 2rem;
+        width: 80%;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    #fila_cabecera{
+        position: sticky;
+        top: 10rem;
+        background-color: #004add;
+        color: white;
+    }
+
+    .tabla_cita th{
+        font-size: 0.8rem;
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .tabla_cita td{
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .img_editar{
+        cursor: pointer;
+    }
+
+    .img_eliminar{
+        cursor: pointer;
+    }
+
+
+    /*FORM EDITAR*/
+
+    .pop_desplegable{
+        position: absolute;
+        top: 10rem;
+        left: -100%;
+        z-index: 10;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        background-color: lightcyan;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s linear;
+    }
+
+    .form_main{
+        width: 70%;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .titulo_form{
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+        color: #004add;
+    }
+
+    .gridBox_form{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .subtitulo_form_grid{
+        font-size: 2rem;
+        font-weight: 300;
+        color: #ff751f;
+        grid-column: 1 / 3;
+    }
+
+    .datos_paciente{
+        width: 100%;
+        margin: 0 auto;
+        height: 3rem;
+        border-radius: 1rem;
+        border: 1px solid lightgray;
+        padding: 2rem 1rem;  
+        font-size: 1.5rem;
+        grid-column: 0/1;
+    }
+
+    .datos_paciente:hover{
+        cursor: pointer;
+        border: 2px solid #004add;
+        color: #004add;
+    }
+
+    #date_paciente{
+        grid-column: 1 / 3;
+    }
+
+    #obs_pacientes{
+        grid-column: 1 / 3;
+        height: 10rem;
+    }
+
+    .btn_form{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 0 / 1;
+        background-color: #004add;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #4280fb;
+    }
+
+    .btn_form_reset{
+        width: 80%;
+        margin: 0 auto;
+        grid-column: 2 / 3;
+        background-color: #ff751f;
+        color: white;
+        height: 3rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 2rem;
+        transition: all 0.5s linear;
+    }
+
+    .btn_form_reset:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        background-color: #d45200;
+    }
+
+    /*FOOTER*/
+    footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+}
